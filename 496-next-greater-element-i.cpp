@@ -1,3 +1,7 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
 class Solution {
 private:
     int get_index(vector<int> &nums, int num){

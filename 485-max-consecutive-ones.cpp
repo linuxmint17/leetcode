@@ -15,10 +15,11 @@ using namespace std;
 class Solution {
 public:
     int findMaxConsecutiveOnes(vector<int>& nums) {
-        size_t cnt = 0;
+        int cnt = 0;
         size_t len = nums.size();
         size_t i;
-        array<int, 10000> res = { 0 };
+        //array<int, 10000> res = { 0 };
+        vector<int> res;
         int ref = 0;
         for (i = 0; i < len; i++) {
             if (nums[i]) {
@@ -28,7 +29,8 @@ public:
             }
         }
         cnt = res[0];
-        for (int i = 1; i < res.size(); i++) {
+        size_t sz = res.size();
+        for (size_t i = 1; i < sz; i++) {
             if (res[i] > cnt) {
                 cnt = res[i];
             }
